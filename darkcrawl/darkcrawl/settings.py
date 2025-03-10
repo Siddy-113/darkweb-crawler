@@ -90,3 +90,15 @@ ROBOTSTXT_OBEY = True
 # Set settings whose default value is deprecated to a future-proof value
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+#Modifications for dark web crawling 
+# # Use Tor as a proxy
+# HTTP_PROXY = "http://127.0.0.1:8118"  # If using Privoxy
+# HTTP_PROXY = "socks5h://127.0.0.1:9050"  # If direct Tor connection
+
+# DOWNLOADER_MIDDLEWARES = {
+#     "scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware": 1,
+# }
+
+# # Set User-Agent to avoid detection
+# USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0
