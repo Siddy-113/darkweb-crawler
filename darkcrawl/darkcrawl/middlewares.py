@@ -4,10 +4,16 @@
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
+import random
 
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
 
+class TorProxyMiddleware:
+    def process_requests(self, request, spider):
+        #set Tor proxy on each request
+        request.meta['proxy'] = 'http://127.0.0.1:9050'
+        return None
 
 class DarkcrawlSpiderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
