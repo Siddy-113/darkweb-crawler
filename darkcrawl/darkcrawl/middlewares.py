@@ -10,9 +10,9 @@ import random
 from itemadapter import is_item, ItemAdapter
 
 class TorProxyMiddleware:
-    def process_requests(self, request, spider):
+    def process_request(self, request, spider):
         #set Tor proxy on each request
-        request.meta['proxy'] = 'http://127.0.0.1:9050'
+        request.meta['proxy'] = 'socks5h://127.0.0.1:9050'
         return None
 
 class DarkcrawlSpiderMiddleware:
